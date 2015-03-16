@@ -92,4 +92,4 @@ colNum <- ncol(all_data)
 data_avg <- ddply(all_data, .(subject, activity), function(x) colMeans(x[, 3:colNum]))
 
 # write file with header and separator to facilitate futur import
-write.table(data_avg, "data_avg.txt", row.name=TRUE, sep=",")
+write.table(data_avg, "data_avg.txt", row.name=FALSE, sep=",")
